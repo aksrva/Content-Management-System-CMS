@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="profile-page">
+    <div class="add-post-btn align-right m-tb">
+      <a class="btn" href="profile/add-post">Add +</a>
+    </div>
+    <div class="profile-post d-flex algn-cntr jstfy-spce-bwn gap-10">
+      <% for (const post of posts) { %>
+      <div class="post">
+        <div class="postImage">
+          <img src="../images/<%= post.image %>" alt="" />
+        </div>
+        <div class="postTitle">
+          <a href="/<%= post.slug %>"><%= post.title %></a>
+        </div>
+        <div class="postMetaDesc">
+          <p><%= post.metaDesc %></p>
+        </div>
+        <div class="post-controller d-flex gap-1">
+          <div class="edit-btn controller-btn">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </div>
+          <div
+            class="delete-btn controller-btn delete-post"
+            post-id="<%= post.id %>"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>

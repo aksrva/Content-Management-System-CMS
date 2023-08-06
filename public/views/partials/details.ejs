@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="m-tb">
+    <p>
+      <span>Author: <%= post.author%></span> |
+      <span>Category : <%= post.category%></span> |
+      <span>Published :<%= post.dateTime%></span>
+    </p>
+  </div>
+  <div class="post-details-image">
+    <img src="images/<%= post.image%>" alt="" />
+  </div>
+  <div class="details-desc m-tb"><%- post.desc%></div>
+  <div class="details-tags">
+    Tags: <br />
+    <br />
+    <% for (const tag of post.tags) { %>
+    <span>#<%= tag %></span>
+    <% } %>
+  </div>
+</div>

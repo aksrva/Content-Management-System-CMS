@@ -1,0 +1,15 @@
+<div class="postlistView d-flex gap-10">
+  <% for (const post of posts) { %>
+  <div class="post">
+    <div class="postImage">
+      <img src="../images/<%= post.image %>" alt="" />
+    </div>
+    <div class="postTitle">
+      <a href="/<%= post.slug %>"><%= post.title %></a>
+    </div>
+    <div class="postMetaDesc">
+      <p><%= post.metaDesc %></p>
+    </div>
+  </div>
+  <% } %>
+</div>

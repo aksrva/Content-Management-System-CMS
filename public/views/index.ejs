@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogVista</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <!-- post view -->
+    <% if (page == "home") {%> <%- include('partials/homeView.ejs') %> <% } else
+    if(page == "login") {%> <%- include('partials/login.ejs') %> <% } else
+    if(page == "signup") {%> <%- include('partials/signup.ejs') %> <% } else
+    if(page == "profile") {%> <%- include('partials/profile.ejs') %> <% } else
+    if(page == "addPost") {%> <%- include('partials/addPost.ejs') %> <% } else
+    if(page == "details") {%> <%- include('partials/details.ejs') %> <% } %>
+    <!-- footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

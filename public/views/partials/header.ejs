@@ -1,0 +1,17 @@
+<header>
+  <div class="container d-flex algn-cntr jstfy-spce-bwn">
+    <div class="logo"><span>Blog</span><span>Vista</span></div>
+    <div class="links">
+      <ul class="d-flex algn-cntr gap-1">
+        <li><a href="/">Home</a></li>
+        <% if (username != null) { %>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <% } else {%>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</header>
